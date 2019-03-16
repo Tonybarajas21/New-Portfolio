@@ -19,10 +19,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+    <script>
+        $(document).ready(function () {
+            $(".sidenav").sideNav();
+        });
+      </script>
+
 </head>
 
 <body>
-
     <script src="javascript.js"></script>
     <header id="masthead">
 
@@ -31,8 +36,7 @@
         <nav class="black">
             <div class="nav-wrapper">
                 <a href="index.html" class="brand-logo">Tony Barajas</a>
-                <a href="https://www.linkedin.com/in/tony-barajas-01286641/" class="fa fa-linkedin"></a>
-                <a href="https://github.com/Tonybarajas21" class="fa fa-github"></a>
+
                 <a href="index.html" data-target="mobile-nav" class="sidenav-trigger">
                     <i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -42,27 +46,28 @@
                             <i class="material-icons right">collections</i></a></li>
                     <li><a href="contact.html" class="waves-effect waves-light btn #757575 grey darken-1">Contact <i
                                 class="material-icons right">email</i></a></li>
+                    <li><a href="https://www.linkedin.com/in/tony-barajas-01286641/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Tonybarajas21"><i class="fa fa-github"></i></a></li>
 
-                    
+                </ul>
+
+
+
+                <ul class="sidenav" id="mobile-nav">
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
 
                 </ul>
             </div>
-
         </nav>
-        <ul class="sidenav" id="mobile-nav">
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-
     </header>
     <div class="fullscreen">
         <video id="main-video" loop="true" autoplay="true" muted="true" preload="true">
             <source src="assets/css/hd0933.mp4" type="video/mp4"> </video>
 
     </div>
-    <div class="row">
+    <div class="container">
         <div class="col s6">
 
             <h1>About Me</h1>

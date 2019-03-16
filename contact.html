@@ -11,13 +11,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <script src="/js/emailForm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script>
+        $(document).ready(function () {
+            $(".sidenav").sideNav();
+        });
+      </script>
 
 </head>
 
@@ -30,8 +35,7 @@
         <nav class="black">
             <div class="nav-wrapper">
                 <a href="index.html" class="brand-logo">Tony Barajas</a>
-                <a href="https://www.linkedin.com/in/tony-barajas-01286641/" class="fa fa-linkedin"></a>
-                <a href="https://github.com/Tonybarajas21" class="fa fa-github"></a>
+
                 <a href="index.html" data-target="mobile-nav" class="sidenav-trigger">
                     <i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -41,18 +45,21 @@
                             <i class="material-icons right">collections</i></a></li>
                     <li><a href="contact.html" class="waves-effect waves-light btn #757575 grey darken-1">Contact <i
                                 class="material-icons right">email</i></a></li>
+                    <li><a href="https://www.linkedin.com/in/tony-barajas-01286641/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Tonybarajas21"><i class="fa fa-github"></i></a></li>
+
+                </ul>
+
+
+
+                <ul class="sidenav" id="mobile-nav">
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
 
                 </ul>
             </div>
-
         </nav>
-        <ul class="sidenav" id="mobile-nav">
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-
     </header>
     <div class="fullscreen">
         <video id="main-video" loop="true" autoplay="true" muted="true" preload="true">
@@ -60,7 +67,7 @@
 
     </div>
 
-    <div class="container-contact">
+    <!-- <div class="container-contact">
         <div id="content-container">
 
             <h1>Contact</h1>
@@ -88,7 +95,47 @@
             </form>
 
         </div>
-    </div>
+    </div> -->
+    <br>
+    <main>
+        <div class="fluid">
+            <form class="contact-form" action="contactform.php" method="post" name="sendEmail">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12 m12 l12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_prefix" type="text" class="validate" style="color:skyblue">
+
+                                <label for="icon_prefix">First Name</label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m12 l12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_email" type="text" class="validate" style="color:skyblue">
+                                <label for="icon_email">Email</label>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row-form">
+                            <div class="input-field col s12 m12 l12">
+                                <legend><span name="members" class="section"></span> Type Your Email Here.</legend>
+                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="12"></textarea>
+                                <fieldset>
+                                    <button name="submit" type="submit" name="submit" id="contact-submit" data-submit="...Sending">Send
+                                        E-mail</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </main>
 
 
 </body>
